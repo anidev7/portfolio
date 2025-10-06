@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anunay Anand - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div id="progress-bar" class="progress-bar"></div>
+
+    <!-- Header -->
+    <header id="header" class="header">
+        <nav class="nav-container">
+            <div class="nav-content">
+                <!-- Logo -->
+                <div class="logo" onclick="scrollToSection('home')">
+                    <div class="logo-icon">
+                        <span>A</span>
+                    </div>
+                    <span class="logo-text">AniDev UniStudio</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="nav-menu desktop-nav">
+                    <button onclick="scrollToSection('home')" class="nav-link">
+                        Home
+                        <span class="nav-underline"></span>
+                    </button>
+                    <button onclick="scrollToSection('portfolio')" class="nav-link">
+                        Portfolio
+                        <span class="nav-underline"></span>
+                    </button>
+                    <button onclick="scrollToSection('services')" class="nav-link">
+                        Services
+                        <span class="nav-underline"></span>
+                    </button>
+                    <button onclick="scrollToSection('process')" class="nav-link">
+                        Process
+                        <span class="nav-underline"></span>
+                    </button>
+                    <button onclick="scrollToSection('about')" class="nav-link">
+                        About
+                        <span class="nav-underline"></span>
+                    </button>
+                    <button onclick="scrollToSection('contact')" class="nav-link">
+                        Contact
+                        <span class="nav-underline"></span>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <svg class="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                    <svg class="close-icon hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobile-menu">
+                <button onclick="scrollToSection('home')" class="mobile-nav-link">Home</button>
+                <button onclick="scrollToSection('portfolio')" class="mobile-nav-link">Portfolio</button>
+                <button onclick="scrollToSection('services')" class="mobile-nav-link">Services</button>
+                <button onclick="scrollToSection('process')" class="mobile-nav-link">Process</button>
+                <button onclick="scrollToSection('about')" class="mobile-nav-link">About</button>
+                <button onclick="scrollToSection('contact')" class="mobile-nav-link">Contact</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-bg">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+        </div>
+        
+        <div class="container hero-content">
+            <h1 class="hero-title">
+                Hi, I'm <span class="gradient-text">Anunay Anand</span>
+            </h1>
+            <h2 class="hero-subtitle">Building creative digital experiences</h2>
+            <p class="hero-tagline">Freelancer & Founder of AniDev UniStudio</p>
+            <p class="hero-description">
+                Crafting beautiful, responsive websites that bring your vision to life
+            </p>
+            <button class="cta-button" onclick="scrollToSection('portfolio')">
+                View My Work
+                <svg class="arrow-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M7 13l3 3 7-7"></path>
+                    <path d="M12 17V7"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="scroll-indicator">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 13l3 3 7-7"></path>
+                <path d="M12 17V7"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Portfolio</h2>
+                <p class="section-description">
+                    Recent projects showcasing my design and development capabilities
+                </p>
+            </div>
+            
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="All">All</button>
+                <button class="filter-btn" data-filter="Web Development">Web Development</button>
+                <button class="filter-btn" data-filter="AI/ML">AI/ML</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="Web Development">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop" alt="Restaurant Website">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-tags">
+                                <span>React</span>
+                                <span>Responsive</span>
+                                <span>Modern</span>
+                            </div>
+                            <button class="view-project-btn" onclick="window.open('https://indiflavor.42web.io', '_blank')">
+                                View Project
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15,3 21,3 21,9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="portfolio-category">Web Development</span>
+                        <h3 class="portfolio-title">Restaurant Website</h3>
+                        <p class="portfolio-desc">Elegant dining experience with online ordering and menu management</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="AI/ML">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&h=600&fit=crop" alt="AI Chatbot">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-tags">
+                                <span>AI</span>
+                                <span>NLP</span>
+                                <span>Python</span>
+                            </div>
+                            <button class="view-project-btn">
+                                View Project
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15,3 21,3 21,9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="portfolio-category">AI/ML</span>
+                        <h3 class="portfolio-title">AI Chatbot</h3>
+                        <p class="portfolio-desc">Intelligent conversational AI with natural language processing</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="Web Development">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop" alt="Portfolio Website">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-tags">
+                                <span>React</span>
+                                <span>Tailwind</span>
+                                <span>Framer Motion</span>
+                            </div>
+                            <button class="view-project-btn">
+                                View Project
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15,3 21,3 21,9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="portfolio-category">Web Development</span>
+                        <h3 class="portfolio-title">Portfolio Website</h3>
+                        <p class="portfolio-desc">Modern portfolio showcase with smooth animations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Services & Pricing</h2>
+                <p class="section-description">
+                    Choose the perfect package for your needs. All plans include responsive design and professional quality.
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3 class="service-title">Static Website</h3>
+                    <div class="service-price">
+                        <span class="price">₹1,499</span>
+                        <span class="price-plus">+</span>
+                    </div>
+                    <p class="service-description">Perfect for personal blogs, portfolios, or small business sites</p>
+                    <p class="service-delivery">⏱️ 2 to 6 days delivery</p>
+                    <ul class="service-features">
+                        <li>1-3 Static Pages (Home, About, Contact)</li>
+                        <li>Responsive Design (Mobile + Desktop)</li>
+                        <li>Basic Contact Form</li>
+                        <li>Some animation and decent UI design</li>
+                        <li>Free 1 Month Support</li>
+                    </ul>
+                    <button class="service-btn">Get Started</button>
+                </div>
+                
+                <div class="service-card popular">
+                    <div class="popular-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                        </svg>
+                        Most Popular
+                    </div>
+                    <h3 class="service-title">Dynamic Website</h3>
+                    <div class="service-price">
+                        <span class="price">₹3,499</span>
+                        <span class="price-plus">+</span>
+                    </div>
+                    <p class="service-description">Ideal for growing businesses with content management needs</p>
+                    <p class="service-delivery">⏱️ 6 to 10 days delivery</p>
+                    <ul class="service-features">
+                        <li>4-7 Static Pages</li>
+                        <li>Responsive & SEO Friendly Design</li>
+                        <li>Contact/Detail/Service Form with Email</li>
+                        <li>Basic Image Gallery / Portfolio Section</li>
+                        <li>Better animation and UI design</li>
+                        <li>Order for re-design 3 times</li>
+                        <li>Free 3 Month Support</li>
+                    </ul>
+                    <button class="service-btn primary">Get Started</button>
+                </div>
+                
+                <div class="service-card">
+                    <h3 class="service-title">Premium Website</h3>
+                    <div class="service-price">
+                        <span class="price">₹5,999</span>
+                        <span class="price-plus">+</span>
+                    </div>
+                    <p class="service-description">Complete solution with advanced features and custom design</p>
+                    <p class="service-delivery">⏱️ 9 to 20 days delivery</p>
+                    <ul class="service-features">
+                        <li>8-15 Static Pages</li>
+                        <li>Advanced Custom Design and animation</li>
+                        <li>SEO + Speed Optimization</li>
+                        <li>Contact Form + Google Map Integration</li>
+                        <li>Order to re-make the full web 3 times</li>
+                        <li>AI integrated for support</li>
+                        <li>Free 6 Month Support</li>
+                    </ul>
+                    <button class="service-btn">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Process</h2>
+                <p class="section-description">
+                    A streamlined approach to bringing your ideas to life
+                </p>
+            </div>
+            
+            <div class="process-container">
+                <div class="process-line"></div>
+                <div class="process-grid">
+                    <div class="process-step">
+                        <div class="step-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                            <div class="step-number">1</div>
+                        </div>
+                        <h3 class="step-title">Consultation</h3>
+                        <p class="step-description">We discuss your project goals, requirements, and vision to understand exactly what you need.</p>
+                        <svg class="step-arrow" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9,18 15,12 9,6"></polyline>
+                        </svg>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <div class="step-number">2</div>
+                        </div>
+                        <h3 class="step-title">Planning</h3>
+                        <p class="step-description">I create a detailed project plan, timeline, and strategy to ensure smooth execution.</p>
+                        <svg class="step-arrow" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9,18 15,12 9,6"></polyline>
+                        </svg>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                            </svg>
+                            <div class="step-number">3</div>
+                        </div>
+                        <h3 class="step-title">Design</h3>
+                        <p class="step-description">Beautiful mockups and prototypes are created for your review and feedback.</p>
+                        <svg class="step-arrow" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9,18 15,12 9,6"></polyline>
+                        </svg>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="16,18 22,12 16,6"></polyline>
+                                <polyline points="8,6 2,12 8,18"></polyline>
+                            </svg>
+                            <div class="step-number">4</div>
+                        </div>
+                        <h3 class="step-title">Development</h3>
+                        <p class="step-description">Your project comes to life with clean, efficient code and best practices.</p>
+                        <svg class="step-arrow" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9,18 15,12 9,6"></polyline>
+                        </svg>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 00-2.91-.09z"></path>
+                                <path d="M12 15l-3-3a22 22 0 012-3.95A12.88 12.88 0 0122 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 01-4 2z"></path>
+                            </svg>
+                            <div class="step-number">5</div>
+                        </div>
+                        <h3 class="step-title">Delivery</h3>
+                        <p class="step-description">Final testing, deployment, and launch of your project with ongoing support.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=800&fit=crop" alt="Anunay Anand working">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="floating-bg bg-1"></div>
+                    <div class="floating-bg bg-2"></div>
+                </div>
+                
+                <div class="about-text">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="about-description">
+                        I'm Anunay Anand, founder of AniDev UniStudio, based in Bihar.
+                    </p>
+                    <p class="about-description">
+                        At my core, I'm a web developer and designer who loves blending clean code with creative visuals. My work is all about building digital experiences that flow smoothly, look modern, and feel alive with interaction.
+                    </p>
+                    <p class="about-description">
+                        With every project, I bring together the best of both worlds — strong technical foundations and engaging design. Whether it's a responsive website that adapts beautifully across devices or a modern UI/UX enhanced with subtle animations, I aim to deliver experiences that don't just work, but also inspire and captivate.
+                    </p>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22,4 12,14.01 9,11.01"></polyline>
+                            </svg>
+                            <span>Responsive Web Development & Design</span>
+                        </div>
+                        <div class="skill-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22,4 12,14.01 9,11.01"></polyline>
+                            </svg>
+                            <span>Modern UI/UX with smooth animations</span>
+                        </div>
+                        <div class="skill-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22,4 12,14.01 9,11.01"></polyline>
+                            </svg>
+                            <span>React & JavaScript Development</span>
+                        </div>
+                        <div class="skill-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22,4 12,14.01 9,11.01"></polyline>
+                            </svg>
+                            <span>SEO Optimization</span>
+                        </div>
+                        <div class="skill-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22,4 12,14.01 9,11.01"></polyline>
+                            </svg>
+                            <span>Fast & Scalable Performance</span>
+                        </div>
+                        <div class="skill-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22,4 12,14.01 9,11.01"></polyline>
+                            </svg>
+                            <span>Custom Tailored Solutions</span>
+                        </div>
+                        <div class="skill-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22,4 12,14.01 9,11.01"></polyline>
+                            </svg>
+                            <span>AI Integration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's Build Something Great Together</p>
+                <p class="section-description">
+                    Have a project in mind? Let's discuss how I can help bring your vision to life.
+                </p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>Feel free to reach out through any of these channels or use the contact form.</p>
+                    
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="contact-label">Email</p>
+                                <a href="mailto:anidev2025@gmail.com" class="contact-value">anidev2025@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="contact-label">Phone</p>
+                                <p class="contact-value">+91 XXX XXX XXXX</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="contact-label">Location</p>
+                                <p class="contact-value">India</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">Service Needed</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select a service</option>
+                            <option value="web-development">Web Development</option>
+                            <option value="app-development">App Development</option>
+                            <option value="ui-ux-design">UI/UX Design</option>
+                            <option value="branding">Branding</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        Send Message
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22,2 15,22 11,13 2,9 22,2"></polygon>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <span>A</span>
+                        </div>
+                        <span class="logo-text">AniDev UniStudio</span>
+                    </div>
+                    <p class="footer-description">
+                        Building creative digital experiences that make a difference.
+                    </p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><button onclick="scrollToSection('home')">Home</button></li>
+                        <li><button onclick="scrollToSection('portfolio')">Portfolio</button></li>
+                        <li><button onclick="scrollToSection('services')">Services</button></li>
+                        <li><button onclick="scrollToSection('about')">About</button></li>
+                        <li><button onclick="scrollToSection('contact')">Contact</button></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <h3>Connect With Me</h3>
+                    <div class="social-links">
+                        <a href="https://github.com" target="_blank" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                            </svg>
+                        </a>
+                        <a href="mailto:anidev2025@gmail.com" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 AniDev UniStudio | Made with ❤️ by Anunay Anand</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
